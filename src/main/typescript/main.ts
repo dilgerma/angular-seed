@@ -13,13 +13,14 @@ import {BrowserModule} from "@angular/platform-browser";
 import {HttpModule} from "@angular/http";
 import {AppComponent} from "./components/app-component";
 import {DescriptionComponent} from "./components/description/descriptionComponent";
+import {FormsModule} from "@angular/forms";
 
 var jQuery = require('jquery');
 require('bootstrap-sass');
 jQuery.noConflict(true);
 
 @NgModule({
-    imports: [BrowserModule, HttpModule],
+    imports: [BrowserModule, HttpModule, FormsModule],
     declarations: [AppComponent, DescriptionComponent],
     bootstrap: [AppComponent],
     providers: [{provide: 'Window', useValue: window}],
